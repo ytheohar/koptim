@@ -1,5 +1,4 @@
-# koptim
-Koptim: A Kotlin DSL for Linear Programming
+# koptim: A Kotlin DSL for Linear Programming
 
 Koptim (for Kotlin Optimization) is a Kotlin DSL for Linear Programming. It uses the [Apache Commons Mathematics Library](http://commons.apache.org/proper/commons-math/) and its [Simplex](https://en.wikipedia.org/wiki/Simplex_algorithm) implementation (see org.apache.commons.math3.optim.linear.SimplexSolver) to solve the LP instances. 
 
