@@ -24,3 +24,13 @@ The only compile time dependency is the [Apache Commons Mathematics Library](htt
   lp.x.forEachIndexed { index, lpVar ->  println("x$index: ${lpVar.value}")}
   println("objFun: ${lp.objectiveValue}")    
 ```
+
+# Limitations
+While koptim targets the [LP canonical form](https://en.wikipedia.org/wiki/Linear_programming), some flexibility beyond the canonical form is offered:
+1. you can define min instead of max to minimize the objective function;
+2. constants are allowed in the objective function; 
+3. variables are allowed to be negative (if you want one to be strictly non-negative, you need to make this explicit with a constraint).
+
+Koptim strictly adheres to the canonical form for constraints. All the constraints are deemed "less than or equals to", no matter what the comparison symbol is ('<=' or '>='), while '==' is a compilation error.
+  
+
