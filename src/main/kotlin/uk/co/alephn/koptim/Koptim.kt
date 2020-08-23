@@ -1,7 +1,7 @@
 package uk.co.alephn.koptim
 
 
-fun main(args: Array<String>) {
+fun main() {
     val lp = LPSolver()
 
     lp.max {
@@ -13,8 +13,6 @@ fun main(args: Array<String>) {
         -x(0) - x(1) <= -4
     }
 
-
     lp.x.forEachIndexed { index, lpVar ->  println("x$index: ${lpVar.value}")}
     println("objFun: ${lp.objectiveValue}")
-
 }
